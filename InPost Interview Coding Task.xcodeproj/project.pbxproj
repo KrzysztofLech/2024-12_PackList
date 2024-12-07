@@ -11,16 +11,13 @@
 		6B1F657E2D0365CA0042852D /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1F657D2D0365CA0042852D /* Status.swift */; };
 		6B1F65802D0367E50042852D /* ShipmentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1F657F2D0367E50042852D /* ShipmentType.swift */; };
 		6B1F65842D036C590042852D /* AppStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1F65832D036C590042852D /* AppStrings.swift */; };
+		6B1F65882D042FAC0042852D /* PackListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1F65872D042FAC0042852D /* PackListView.swift */; };
+		6B1F658A2D042FC60042852D /* PackListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1F65892D042FC60042852D /* PackListViewModel.swift */; };
+		6B1F658D2D0435040042852D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B1F658B2D0435040042852D /* LaunchScreen.storyboard */; };
 		D671D9582913E528001FA9D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D9572913E528001FA9D5 /* AppDelegate.swift */; };
-		D671D95C2913E528001FA9D5 /* PackListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D95B2913E528001FA9D5 /* PackListController.swift */; };
-		D671D95F2913E528001FA9D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D671D95D2913E528001FA9D5 /* Main.storyboard */; };
 		D671D9612913E529001FA9D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D671D9602913E529001FA9D5 /* Assets.xcassets */; };
-		D671D9642913E529001FA9D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D671D9622913E529001FA9D5 /* LaunchScreen.storyboard */; };
 		D671D96F2913E529001FA9D5 /* InPostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D96E2913E529001FA9D5 /* InPostTests.swift */; };
-		D671D98C2913EDA4001FA9D5 /* IPNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D98B2913EDA4001FA9D5 /* IPNavigationController.swift */; };
 		D671D98F2913F2A1001FA9D5 /* Pack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D98E2913F2A1001FA9D5 /* Pack.swift */; };
-		D671D9912913F79B001FA9D5 /* PackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D9902913F79B001FA9D5 /* PackView.swift */; };
-		D671D9942913F82E001FA9D5 /* PackView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D671D9932913F82E001FA9D5 /* PackView.xib */; };
 		D671D9972915111C001FA9D5 /* PackNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D9962915111C001FA9D5 /* PackNetworking.swift */; };
 		D671D99E2915139F001FA9D5 /* packs.json in Resources */ = {isa = PBXBuildFile; fileRef = D671D99D2915139F001FA9D5 /* packs.json */; };
 		E9D6834053AC34681B44D9F7 /* Pods_InPost_Interview_Coding_Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D61EABD2778CE163139EDFE /* Pods_InPost_Interview_Coding_Task.framework */; };
@@ -50,6 +47,9 @@
 		6B1F657D2D0365CA0042852D /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		6B1F657F2D0367E50042852D /* ShipmentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipmentType.swift; sourceTree = "<group>"; };
 		6B1F65832D036C590042852D /* AppStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStrings.swift; sourceTree = "<group>"; };
+		6B1F65872D042FAC0042852D /* PackListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackListView.swift; sourceTree = "<group>"; };
+		6B1F65892D042FC60042852D /* PackListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackListViewModel.swift; sourceTree = "<group>"; };
+		6B1F658C2D0435040042852D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83D85C87E2E58F658C011C49 /* Pods-InPost Interview Coding Task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InPost Interview Coding Task.release.xcconfig"; path = "Target Support Files/Pods-InPost Interview Coding Task/Pods-InPost Interview Coding Task.release.xcconfig"; sourceTree = "<group>"; };
 		86F3EED5272EDA4036556337 /* Pods-InPost Interview Coding Task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InPost Interview Coding Task.debug.xcconfig"; path = "Target Support Files/Pods-InPost Interview Coding Task/Pods-InPost Interview Coding Task.debug.xcconfig"; sourceTree = "<group>"; };
 		871FC296EE090F4634A2C236 /* Pods_InPost_Interview_Coding_Task_InPost_Interview_Coding_TaskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InPost_Interview_Coding_Task_InPost_Interview_Coding_TaskUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,18 +57,12 @@
 		9D61EABD2778CE163139EDFE /* Pods_InPost_Interview_Coding_Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InPost_Interview_Coding_Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D671D9542913E528001FA9D5 /* InPost Interview Coding Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InPost Interview Coding Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D671D9572913E528001FA9D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D671D95B2913E528001FA9D5 /* PackListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackListController.swift; sourceTree = "<group>"; };
-		D671D95E2913E528001FA9D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D671D9602913E529001FA9D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D671D9632913E529001FA9D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D671D9652913E529001FA9D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D671D96A2913E529001FA9D5 /* InPost Interview Coding TaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "InPost Interview Coding TaskTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D671D96E2913E529001FA9D5 /* InPostTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InPostTests.swift; sourceTree = "<group>"; };
 		D671D9742913E529001FA9D5 /* InPost Interview Coding TaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "InPost Interview Coding TaskUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D671D98B2913EDA4001FA9D5 /* IPNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPNavigationController.swift; sourceTree = "<group>"; };
 		D671D98E2913F2A1001FA9D5 /* Pack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pack.swift; sourceTree = "<group>"; };
-		D671D9902913F79B001FA9D5 /* PackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackView.swift; sourceTree = "<group>"; };
-		D671D9932913F82E001FA9D5 /* PackView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PackView.xib; sourceTree = "<group>"; };
 		D671D9962915111C001FA9D5 /* PackNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackNetworking.swift; sourceTree = "<group>"; };
 		D671D99D2915139F001FA9D5 /* packs.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = packs.json; sourceTree = "<group>"; };
 		E9D6C720825E15C8DB9CDFC0 /* Pods_InPost_Interview_Coding_TaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InPost_Interview_Coding_TaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,15 +112,6 @@
 				D671D9952915110C001FA9D5 /* Networking */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		6B1F65862D03A3B10042852D /* Old */ = {
-			isa = PBXGroup;
-			children = (
-				D671D98A2913ED95001FA9D5 /* Controls */,
-				D671D9882913E677001FA9D5 /* Assets */,
-			);
-			path = Old;
 			sourceTree = "<group>";
 		};
 		913D9F73B32F33C130C9E20B /* Frameworks */ = {
@@ -181,7 +166,6 @@
 				D671D98D2913F297001FA9D5 /* Models */,
 				6B1F65852D03A3710042852D /* Services */,
 				6B1F65812D036C140042852D /* Resources */,
-				6B1F65862D03A3B10042852D /* Old */,
 				D671D9652913E529001FA9D5 /* Info.plist */,
 			);
 			path = "InPost Interview Coding Task";
@@ -195,30 +179,14 @@
 			path = "InPost Interview Coding TaskTests";
 			sourceTree = "<group>";
 		};
-		D671D9882913E677001FA9D5 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				D671D95D2913E528001FA9D5 /* Main.storyboard */,
-				D671D9622913E529001FA9D5 /* LaunchScreen.storyboard */,
-			);
-			path = Assets;
-			sourceTree = "<group>";
-		};
 		D671D9892913E685001FA9D5 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				D671D95B2913E528001FA9D5 /* PackListController.swift */,
+				6B1F65872D042FAC0042852D /* PackListView.swift */,
+				6B1F65892D042FC60042852D /* PackListViewModel.swift */,
+				6B1F658B2D0435040042852D /* LaunchScreen.storyboard */,
 			);
 			path = Screens;
-			sourceTree = "<group>";
-		};
-		D671D98A2913ED95001FA9D5 /* Controls */ = {
-			isa = PBXGroup;
-			children = (
-				D671D9922913F81D001FA9D5 /* PackView */,
-				D671D98B2913EDA4001FA9D5 /* IPNavigationController.swift */,
-			);
-			path = Controls;
 			sourceTree = "<group>";
 		};
 		D671D98D2913F297001FA9D5 /* Models */ = {
@@ -229,15 +197,6 @@
 				6B1F657F2D0367E50042852D /* ShipmentType.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		D671D9922913F81D001FA9D5 /* PackView */ = {
-			isa = PBXGroup;
-			children = (
-				D671D9902913F79B001FA9D5 /* PackView.swift */,
-				D671D9932913F82E001FA9D5 /* PackView.xib */,
-			);
-			path = PackView;
 			sourceTree = "<group>";
 		};
 		D671D9952915110C001FA9D5 /* Networking */ = {
@@ -366,11 +325,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D671D9642913E529001FA9D5 /* LaunchScreen.storyboard in Resources */,
+				6B1F658D2D0435040042852D /* LaunchScreen.storyboard in Resources */,
 				D671D99E2915139F001FA9D5 /* packs.json in Resources */,
 				D671D9612913E529001FA9D5 /* Assets.xcassets in Resources */,
-				D671D95F2913E528001FA9D5 /* Main.storyboard in Resources */,
-				D671D9942913F82E001FA9D5 /* PackView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,12 +456,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D671D9972915111C001FA9D5 /* PackNetworking.swift in Sources */,
+				6B1F65882D042FAC0042852D /* PackListView.swift in Sources */,
 				D671D98F2913F2A1001FA9D5 /* Pack.swift in Sources */,
 				6B1F657E2D0365CA0042852D /* Status.swift in Sources */,
-				D671D98C2913EDA4001FA9D5 /* IPNavigationController.swift in Sources */,
-				D671D95C2913E528001FA9D5 /* PackListController.swift in Sources */,
+				6B1F658A2D042FC60042852D /* PackListViewModel.swift in Sources */,
 				6B1F65842D036C590042852D /* AppStrings.swift in Sources */,
-				D671D9912913F79B001FA9D5 /* PackView.swift in Sources */,
 				D671D9582913E528001FA9D5 /* AppDelegate.swift in Sources */,
 				6B1F65802D0367E50042852D /* ShipmentType.swift in Sources */,
 			);
@@ -541,18 +497,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D671D95D2913E528001FA9D5 /* Main.storyboard */ = {
+		6B1F658B2D0435040042852D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D671D95E2913E528001FA9D5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D671D9622913E529001FA9D5 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D671D9632913E529001FA9D5 /* Base */,
+				6B1F658C2D0435040042852D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -688,7 +636,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "InPost Recruitment Task";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 15;
@@ -722,7 +669,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "InPost Recruitment Task";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 15;

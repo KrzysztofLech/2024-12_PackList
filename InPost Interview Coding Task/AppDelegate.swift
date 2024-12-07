@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,12 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func buildStartingView() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let packListController = storyboard.instantiateViewController(withIdentifier: "PackListController") as! PackListController
-        
+		let packListViewModel = PackListViewModel()
+		let packListView = PackListView(viewModel: packListViewModel)
+
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = IPNavigationController(rootViewController: packListController)
+        window?.rootViewController = UIHostingController(rootView: packListView)
         window?.makeKeyAndVisible()
     }
-    
 }
