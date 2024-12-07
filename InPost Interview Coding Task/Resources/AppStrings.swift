@@ -3,29 +3,52 @@
 
 import Foundation
 
+/// In a multilingual application, strings will be replaced by localization keys
 enum AppStrings {
-	enum Pack {
+	enum PackDataModel {
 		enum Status {
-			static let created = "Created"
-			static let confirmed = "Confirmed"
-			static let adoptedAtSourceBranch = "Adopted at source branch"
-			static let sentFromSourceBranch = "Sent from source branch"
-			static let adoptedAtSortingCenter = "Adopted at sorting center"
-			static let sentFromSortingCenter = "Sent from sorting center"
-			static let other = "Other"
-			static let delivered = "Delivered"
-			static let returnedToSender = "Returned to sender"
-			static let avizo = "Avizo"
-			static let outForDelivery = "Out for delivery"
-			static let readyToPickup = "Ready to pickup"
-			static let pickupTimeExpired = "Pickup time expired"
-			static let unknown = "Unknown"
+			static let created = "Utworzona"
+			static let confirmed = "Potwierdzona"
+			static let adoptedAtSourceBranch = "Przyjęta w oddziale"
+			static let sentFromSourceBranch = "Wysłana z oddziału"
+			static let adoptedAtSortingCenter = "Przyjęta w centrum sortowania"
+			static let sentFromSortingCenter = "Wysłana z centrum sortowania"
+			static let other = "Inny"
+			static let delivered = "Odebrana"
+			static let returnedToSender = "Zwrócona do nadawcy"
+			static let avizo = "Zostawiono awizo"
+			static let outForDelivery = "Wydana do doręczenia"
+			static let readyToPickup = "Gotowa do odbioru"
+			static let pickupTimeExpired = "Minął czas odbioru"
+			static let unknown = "Nieznany"
+		}
+
+		enum StatusDescription {
+			static let confirmed = "POTWIERDZONA"
+			static let delivered = "ODEBRANA"
+			static let readyToPickup = "CZEKA NA ODBIÓR DO"
 		}
 
 		enum ShipmentType {
-			static let parcelLocker = "Parcel locker"
-			static let courier = "Courier"
-			static let unknown = "Unknown"
+			static let parcelLocker = "Paczkomat"
+			static let courier = "Kurier"
+			static let unknown = "Nieznany"
 		}
+	}
+
+	enum ListView {
+		static let title = "InPost recruitment task"
+
+		enum Group {
+			static let readyToPickup = "Gotowe do odbioru"
+			static let other = "Pozostałe"
+		}
+	}
+
+	enum PackView {
+		static let packNumber = "NR PRZESYŁKI"
+		static let status = "STATUS"
+		static let sender = "NADAWCA"
+		static let more = "więcej"
 	}
 }

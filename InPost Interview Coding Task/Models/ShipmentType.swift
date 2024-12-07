@@ -23,11 +23,11 @@ extension ShipmentType {
 	var text: String {
 		switch self {
 		case .parcelLocker:
-			AppStrings.Pack.ShipmentType.parcelLocker
+			AppStrings.PackDataModel.ShipmentType.parcelLocker
 		case .courier:
-			AppStrings.Pack.ShipmentType.courier
+			AppStrings.PackDataModel.ShipmentType.courier
 		case .unknown:
-			AppStrings.Pack.ShipmentType.unknown
+			AppStrings.PackDataModel.ShipmentType.unknown
 		}
 	}
 }

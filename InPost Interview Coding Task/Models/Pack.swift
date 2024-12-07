@@ -5,7 +5,7 @@
 //  Created by Damian Piwowarski on 03/11/2022.
 //
 
-import Foundation
+import SwiftUI
 
 /**
  * List of possible statuses with priority order.
@@ -24,7 +24,7 @@ import Foundation
  * 13. PICKUP_TIME_EXPIRED
  */
 
-struct Pack: Decodable {
+struct Pack: Decodable, Identifiable {
     let id: String
 	let status: Status
     let sender: String
@@ -67,4 +67,61 @@ extension Pack {
 			14
 		}
 	}
+
+	var icon: Image? {
+		switch status {
+		case .outForDelivery:
+			Image(.kurier)
+		case .readyToPickup:
+			Image(.paczkomat)
+		default:
+			nil
+		}
+	}
+
+	/// For the purposes of the Interview Coding Task, only a few statuses have a defined date
+	var dateForDescription: Date? {
+		switch self.status {
+		case .confirmed:
+			storedDate
+		case .delivered:
+			pickupDate
+		case .readyToPickup:
+			expiryDate
+		default:
+			nil
+		}
+	}
+}
+
+extension Pack {
+	static var previewData: [Pack] = [
+		.init(
+			id: "235678654323567889762231",
+			status: .outForDelivery,
+			sender: "adresmailowy@mail.pl",
+			expiryDate: nil,
+			pickupDate: nil,
+			storedDate: nil,
+			shipmentType: .parcelLocker
+		),
+		.init(
+			id: "235678654323567889762232",
+			status: .readyToPickup,
+			sender: "adresmailowy@mail.pl",
+			expiryDate: .now,
+			pickupDate: nil,
+			storedDate: nil,
+			shipmentType: .parcelLocker
+		),
+		.init(
+			id: "96730345345597442248333",
+			status: .delivered,
+			sender: "Adam Bielak",
+			expiryDate: nil,
+			pickupDate: Date.now.addingTimeInterval(-86400),
+			storedDate: nil,
+			shipmentType: .parcelLocker
+		)
+	]
 }

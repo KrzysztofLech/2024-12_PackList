@@ -28,33 +28,47 @@ extension Status {
 	var text: String {
 		switch self {
 		case .created:
-			AppStrings.Pack.Status.created
+			AppStrings.PackDataModel.Status.created
 		case .confirmed:
-			AppStrings.Pack.Status.confirmed
+			AppStrings.PackDataModel.Status.confirmed
 		case .adoptedAtSourceBranch:
-			AppStrings.Pack.Status.adoptedAtSourceBranch
+			AppStrings.PackDataModel.Status.adoptedAtSourceBranch
 		case .sentFromSourceBranch:
-			AppStrings.Pack.Status.sentFromSourceBranch
+			AppStrings.PackDataModel.Status.sentFromSourceBranch
 		case .adoptedAtSortingCenter:
-			AppStrings.Pack.Status.adoptedAtSortingCenter
+			AppStrings.PackDataModel.Status.adoptedAtSortingCenter
 		case .sentFromSortingCenter:
-			AppStrings.Pack.Status.sentFromSortingCenter
+			AppStrings.PackDataModel.Status.sentFromSortingCenter
 		case .other:
-			AppStrings.Pack.Status.other
+			AppStrings.PackDataModel.Status.other
 		case .delivered:
-			AppStrings.Pack.Status.delivered
+			AppStrings.PackDataModel.Status.delivered
 		case .returnedToSender:
-			AppStrings.Pack.Status.returnedToSender
+			AppStrings.PackDataModel.Status.returnedToSender
 		case .avizo:
-			AppStrings.Pack.Status.avizo
+			AppStrings.PackDataModel.Status.avizo
 		case .outForDelivery:
-			AppStrings.Pack.Status.outForDelivery
+			AppStrings.PackDataModel.Status.outForDelivery
 		case .readyToPickup:
-			AppStrings.Pack.Status.readyToPickup
+			AppStrings.PackDataModel.Status.readyToPickup
 		case .pickupTimeExpired:
-			AppStrings.Pack.Status.pickupTimeExpired
+			AppStrings.PackDataModel.Status.pickupTimeExpired
 		case .unknown:
-			AppStrings.Pack.Status.unknown
+			AppStrings.PackDataModel.Status.unknown
+		}
+	}
+
+	/// For the purposes of the Interview Coding Task, only a few statuses have a description
+	var description: String {
+		switch self {
+		case .confirmed:
+			AppStrings.PackDataModel.StatusDescription.confirmed
+		case .delivered:
+			AppStrings.PackDataModel.StatusDescription.delivered
+		case .readyToPickup:
+			AppStrings.PackDataModel.StatusDescription.readyToPickup
+		default:
+			""
 		}
 	}
 }

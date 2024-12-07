@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+		setupNavigationBarAppearance()
         buildStartingView()
         return true
     }
@@ -26,4 +27,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = UIHostingController(rootView: packListView)
         window?.makeKeyAndVisible()
     }
+
+	private func setupNavigationBarAppearance() {
+		let appearance = UINavigationBarAppearance()
+		appearance.configureWithOpaqueBackground()
+		appearance.backgroundColor = UIColor.systemBackground
+
+		UINavigationBar.appearance().standardAppearance = appearance
+		UINavigationBar.appearance().scrollEdgeAppearance = appearance
+	}
 }

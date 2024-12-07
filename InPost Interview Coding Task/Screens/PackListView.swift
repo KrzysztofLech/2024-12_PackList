@@ -7,24 +7,37 @@ struct PackListView: View {
 
 	@ObservedObject var viewModel: PackListViewModel
 
-    var body: some View {
+	var body: some View {
 		NavigationView {
-			List {
-				Text("Hello, World!")
-					.font(.Montserrat.medium(size: 20))
-				Text("Hello, World!")
-					.font(.Montserrat.semiBold(size: 20))
-				Text("Hello, World!")
-					.font(.Montserrat.bold(size: 20))
-				Text("Hello, World!")
-					.font(.Montserrat.extraBold(size: 20))
-				Text("Hello, World!")
-					.font(.Montserrat.black(size: 20))
-
+			ScrollView(.vertical, showsIndicators: false) {
+				VStack(spacing: 15) {
+					ForEach(viewModel.packs) { pack in
+						PackCardView(pack: pack)
+					}
+				}
 			}
-			.navigationTitle(Text("Pack List"))
+			.background{
+				Color.background.ignoresSafeArea()
+			}
+
+			// Navigation bar
+			.navigationTitle("")
+			.toolbar {
+				ToolbarItem(placement: .navigation) {
+					Text(AppStrings.ListView.title)
+						.font(.Montserrat.bold(size: 15))
+						.foregroundColor(.textDark)
+						.padding([.leading, .bottom], 4)
+				}
+			}
+
+			// Refresh data
+			.refreshable {
+				viewModel.refreshData()
+			}
 		}
-    }
+	}
+
 }
 
 #Preview {

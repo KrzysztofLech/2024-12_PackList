@@ -4,5 +4,9 @@
 import Foundation
 
 final class PackListViewModel: ObservableObject {
-	@Published var items: [Pack] = []
+	@Published var packs: [Pack] = Pack.previewData
+
+	func refreshData() {
+		print("❤️")
+	}
 }
