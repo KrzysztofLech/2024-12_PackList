@@ -9,8 +9,20 @@ struct PackListView: View {
 
     var body: some View {
 		NavigationView {
-			Text("Hello, World!")
-				.navigationTitle(Text("Pack List"))
+			List {
+				Text("Hello, World!")
+					.font(.Montserrat.medium(size: 20))
+				Text("Hello, World!")
+					.font(.Montserrat.semiBold(size: 20))
+				Text("Hello, World!")
+					.font(.Montserrat.bold(size: 20))
+				Text("Hello, World!")
+					.font(.Montserrat.extraBold(size: 20))
+				Text("Hello, World!")
+					.font(.Montserrat.black(size: 20))
+
+			}
+			.navigationTitle(Text("Pack List"))
 		}
     }
 }
