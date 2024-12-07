@@ -14,6 +14,11 @@
 		6B1F65882D042FAC0042852D /* PackListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1F65872D042FAC0042852D /* PackListView.swift */; };
 		6B1F658A2D042FC60042852D /* PackListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1F65892D042FC60042852D /* PackListViewModel.swift */; };
 		6B1F658D2D0435040042852D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B1F658B2D0435040042852D /* LaunchScreen.storyboard */; };
+		6B1F65952D043AF60042852D /* Montserrat-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6B1F65922D043AF60042852D /* Montserrat-ExtraBold.otf */; };
+		6B1F65962D043AF60042852D /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6B1F65912D043AF60042852D /* Montserrat-Bold.otf */; };
+		6B1F65972D043AF60042852D /* Montserrat-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6B1F65932D043AF60042852D /* Montserrat-Medium.otf */; };
+		6B1F65982D043AF60042852D /* Montserrat-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6B1F65902D043AF60042852D /* Montserrat-Black.otf */; };
+		6B1F65992D043AF60042852D /* Montserrat-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6B1F65942D043AF60042852D /* Montserrat-SemiBold.otf */; };
 		D671D9582913E528001FA9D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D9572913E528001FA9D5 /* AppDelegate.swift */; };
 		D671D9612913E529001FA9D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D671D9602913E529001FA9D5 /* Assets.xcassets */; };
 		D671D96F2913E529001FA9D5 /* InPostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D96E2913E529001FA9D5 /* InPostTests.swift */; };
@@ -50,6 +55,11 @@
 		6B1F65872D042FAC0042852D /* PackListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackListView.swift; sourceTree = "<group>"; };
 		6B1F65892D042FC60042852D /* PackListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackListViewModel.swift; sourceTree = "<group>"; };
 		6B1F658C2D0435040042852D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6B1F65902D043AF60042852D /* Montserrat-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.otf"; sourceTree = "<group>"; };
+		6B1F65912D043AF60042852D /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
+		6B1F65922D043AF60042852D /* Montserrat-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.otf"; sourceTree = "<group>"; };
+		6B1F65932D043AF60042852D /* Montserrat-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.otf"; sourceTree = "<group>"; };
+		6B1F65942D043AF60042852D /* Montserrat-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.otf"; sourceTree = "<group>"; };
 		83D85C87E2E58F658C011C49 /* Pods-InPost Interview Coding Task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InPost Interview Coding Task.release.xcconfig"; path = "Target Support Files/Pods-InPost Interview Coding Task/Pods-InPost Interview Coding Task.release.xcconfig"; sourceTree = "<group>"; };
 		86F3EED5272EDA4036556337 /* Pods-InPost Interview Coding Task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InPost Interview Coding Task.debug.xcconfig"; path = "Target Support Files/Pods-InPost Interview Coding Task/Pods-InPost Interview Coding Task.debug.xcconfig"; sourceTree = "<group>"; };
 		871FC296EE090F4634A2C236 /* Pods_InPost_Interview_Coding_Task_InPost_Interview_Coding_TaskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InPost_Interview_Coding_Task_InPost_Interview_Coding_TaskUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +110,7 @@
 		6B1F65812D036C140042852D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6B1F658F2D0439240042852D /* Fonts */,
 				D671D9602913E529001FA9D5 /* Assets.xcassets */,
 				6B1F65832D036C590042852D /* AppStrings.swift */,
 			);
@@ -112,6 +123,25 @@
 				D671D9952915110C001FA9D5 /* Networking */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		6B1F658E2D0438910042852D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		6B1F658F2D0439240042852D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6B1F65932D043AF60042852D /* Montserrat-Medium.otf */,
+				6B1F65942D043AF60042852D /* Montserrat-SemiBold.otf */,
+				6B1F65912D043AF60042852D /* Montserrat-Bold.otf */,
+				6B1F65922D043AF60042852D /* Montserrat-ExtraBold.otf */,
+				6B1F65902D043AF60042852D /* Montserrat-Black.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		913D9F73B32F33C130C9E20B /* Frameworks */ = {
@@ -165,6 +195,7 @@
 				D671D9892913E685001FA9D5 /* Screens */,
 				D671D98D2913F297001FA9D5 /* Models */,
 				6B1F65852D03A3710042852D /* Services */,
+				6B1F658E2D0438910042852D /* Utils */,
 				6B1F65812D036C140042852D /* Resources */,
 				D671D9652913E529001FA9D5 /* Info.plist */,
 			);
@@ -326,6 +357,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B1F658D2D0435040042852D /* LaunchScreen.storyboard in Resources */,
+				6B1F65952D043AF60042852D /* Montserrat-ExtraBold.otf in Resources */,
+				6B1F65962D043AF60042852D /* Montserrat-Bold.otf in Resources */,
+				6B1F65972D043AF60042852D /* Montserrat-Medium.otf in Resources */,
+				6B1F65982D043AF60042852D /* Montserrat-Black.otf in Resources */,
+				6B1F65992D043AF60042852D /* Montserrat-SemiBold.otf in Resources */,
 				D671D99E2915139F001FA9D5 /* packs.json in Resources */,
 				D671D9612913E529001FA9D5 /* Assets.xcassets in Resources */,
 			);

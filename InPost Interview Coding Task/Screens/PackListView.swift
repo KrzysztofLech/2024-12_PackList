@@ -8,7 +8,10 @@ struct PackListView: View {
 	@ObservedObject var viewModel: PackListViewModel
 
     var body: some View {
-        Text("Hello, World!")
+		NavigationView {
+			Text("Hello, World!")
+				.navigationTitle(Text("Pack List"))
+		}
     }
 }
 
