@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0ABB2A19C1443362ECFE34A7 /* Pods_InPost_Interview_Coding_TaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D6C720825E15C8DB9CDFC0 /* Pods_InPost_Interview_Coding_TaskTests.framework */; };
+		6B1F657E2D0365CA0042852D /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1F657D2D0365CA0042852D /* Status.swift */; };
+		6B1F65802D0367E50042852D /* ShipmentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1F657F2D0367E50042852D /* ShipmentType.swift */; };
+		6B1F65842D036C590042852D /* AppStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1F65832D036C590042852D /* AppStrings.swift */; };
 		D671D9582913E528001FA9D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D9572913E528001FA9D5 /* AppDelegate.swift */; };
 		D671D95C2913E528001FA9D5 /* PackListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D95B2913E528001FA9D5 /* PackListController.swift */; };
 		D671D95F2913E528001FA9D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D671D95D2913E528001FA9D5 /* Main.storyboard */; };
@@ -44,6 +47,9 @@
 /* Begin PBXFileReference section */
 		58AE36A9CE2AB8D6A8D303B3 /* Pods-InPost Interview Coding Task-InPost Interview Coding TaskUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InPost Interview Coding Task-InPost Interview Coding TaskUITests.debug.xcconfig"; path = "Target Support Files/Pods-InPost Interview Coding Task-InPost Interview Coding TaskUITests/Pods-InPost Interview Coding Task-InPost Interview Coding TaskUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5E926BF62306256BFA253197 /* Pods-InPost Interview Coding TaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InPost Interview Coding TaskTests.release.xcconfig"; path = "Target Support Files/Pods-InPost Interview Coding TaskTests/Pods-InPost Interview Coding TaskTests.release.xcconfig"; sourceTree = "<group>"; };
+		6B1F657D2D0365CA0042852D /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		6B1F657F2D0367E50042852D /* ShipmentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipmentType.swift; sourceTree = "<group>"; };
+		6B1F65832D036C590042852D /* AppStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStrings.swift; sourceTree = "<group>"; };
 		83D85C87E2E58F658C011C49 /* Pods-InPost Interview Coding Task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InPost Interview Coding Task.release.xcconfig"; path = "Target Support Files/Pods-InPost Interview Coding Task/Pods-InPost Interview Coding Task.release.xcconfig"; sourceTree = "<group>"; };
 		86F3EED5272EDA4036556337 /* Pods-InPost Interview Coding Task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InPost Interview Coding Task.debug.xcconfig"; path = "Target Support Files/Pods-InPost Interview Coding Task/Pods-InPost Interview Coding Task.debug.xcconfig"; sourceTree = "<group>"; };
 		871FC296EE090F4634A2C236 /* Pods_InPost_Interview_Coding_Task_InPost_Interview_Coding_TaskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InPost_Interview_Coding_Task_InPost_Interview_Coding_TaskUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +103,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B1F65812D036C140042852D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D671D9602913E529001FA9D5 /* Assets.xcassets */,
+				6B1F65832D036C590042852D /* AppStrings.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6B1F65852D03A3710042852D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D671D9952915110C001FA9D5 /* Networking */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		6B1F65862D03A3B10042852D /* Old */ = {
+			isa = PBXGroup;
+			children = (
+				D671D98A2913ED95001FA9D5 /* Controls */,
+				D671D9882913E677001FA9D5 /* Assets */,
+			);
+			path = Old;
+			sourceTree = "<group>";
+		};
 		913D9F73B32F33C130C9E20B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,11 +176,12 @@
 		D671D9562913E528001FA9D5 /* InPost Interview Coding Task */ = {
 			isa = PBXGroup;
 			children = (
-				D671D9872913E649001FA9D5 /* App */,
-				D671D98A2913ED95001FA9D5 /* Controls */,
-				D671D98D2913F297001FA9D5 /* Model */,
-				D671D9952915110C001FA9D5 /* Networking */,
-				D671D9892913E685001FA9D5 /* Screen */,
+				D671D9572913E528001FA9D5 /* AppDelegate.swift */,
+				D671D9892913E685001FA9D5 /* Screens */,
+				D671D98D2913F297001FA9D5 /* Models */,
+				6B1F65852D03A3710042852D /* Services */,
+				6B1F65812D036C140042852D /* Resources */,
+				6B1F65862D03A3B10042852D /* Old */,
 				D671D9652913E529001FA9D5 /* Info.plist */,
 			);
 			path = "InPost Interview Coding Task";
@@ -162,31 +195,21 @@
 			path = "InPost Interview Coding TaskTests";
 			sourceTree = "<group>";
 		};
-		D671D9872913E649001FA9D5 /* App */ = {
-			isa = PBXGroup;
-			children = (
-				D671D9882913E677001FA9D5 /* Assets */,
-				D671D9572913E528001FA9D5 /* AppDelegate.swift */,
-			);
-			path = App;
-			sourceTree = "<group>";
-		};
 		D671D9882913E677001FA9D5 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				D671D9602913E529001FA9D5 /* Assets.xcassets */,
 				D671D95D2913E528001FA9D5 /* Main.storyboard */,
 				D671D9622913E529001FA9D5 /* LaunchScreen.storyboard */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
 		};
-		D671D9892913E685001FA9D5 /* Screen */ = {
+		D671D9892913E685001FA9D5 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
 				D671D95B2913E528001FA9D5 /* PackListController.swift */,
 			);
-			path = Screen;
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		D671D98A2913ED95001FA9D5 /* Controls */ = {
@@ -198,12 +221,14 @@
 			path = Controls;
 			sourceTree = "<group>";
 		};
-		D671D98D2913F297001FA9D5 /* Model */ = {
+		D671D98D2913F297001FA9D5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				D671D98E2913F2A1001FA9D5 /* Pack.swift */,
+				6B1F657D2D0365CA0042852D /* Status.swift */,
+				6B1F657F2D0367E50042852D /* ShipmentType.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		D671D9922913F81D001FA9D5 /* PackView */ = {
@@ -475,10 +500,13 @@
 			files = (
 				D671D9972915111C001FA9D5 /* PackNetworking.swift in Sources */,
 				D671D98F2913F2A1001FA9D5 /* Pack.swift in Sources */,
+				6B1F657E2D0365CA0042852D /* Status.swift in Sources */,
 				D671D98C2913EDA4001FA9D5 /* IPNavigationController.swift in Sources */,
 				D671D95C2913E528001FA9D5 /* PackListController.swift in Sources */,
+				6B1F65842D036C590042852D /* AppStrings.swift in Sources */,
 				D671D9912913F79B001FA9D5 /* PackView.swift in Sources */,
 				D671D9582913E528001FA9D5 /* AppDelegate.swift in Sources */,
+				6B1F65802D0367E50042852D /* ShipmentType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

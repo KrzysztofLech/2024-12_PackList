@@ -24,12 +24,47 @@ import Foundation
  * 13. PICKUP_TIME_EXPIRED
  */
 
-struct Pack: Codable {
+struct Pack: Decodable {
     let id: String
-    let status: String
+	let status: Status
     let sender: String
     let expiryDate: Date?
     let pickupDate: Date?
     let storedDate: Date?
-    let shipmentType: String
+    let shipmentType: ShipmentType
+}
+
+extension Pack {
+	var priority: Int {
+		switch status {
+		case .created:
+			1
+		case .confirmed:
+			2
+		case .adoptedAtSourceBranch:
+			3
+		case .sentFromSourceBranch:
+			4
+		case .adoptedAtSortingCenter:
+			5
+		case .sentFromSortingCenter:
+			6
+		case .other:
+			7
+		case .delivered:
+			8
+		case .returnedToSender:
+			9
+		case .avizo:
+			10
+		case .outForDelivery:
+			11
+		case .readyToPickup:
+			12
+		case .pickupTimeExpired:
+			13
+		case .unknown:
+			14
+		}
+	}
 }
