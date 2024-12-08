@@ -9,11 +9,9 @@ struct PackListView<ViewModel: PackListViewModelProtocol>: View {
 
 	var body: some View {
 		NavigationView {
-			packListView
-
-				// Custom Navigation Bar
+			contentView
 				.navigationTitle("")
-				.toolbar {
+				.toolbar { // Custom Navigation Bar
 					ToolbarItem(placement: .navigation) {
 						Text(AppStrings.ListView.title)
 							.font(.Montserrat.bold(size: 15))
@@ -38,6 +36,16 @@ struct PackListView<ViewModel: PackListViewModelProtocol>: View {
 		}
 	}
 
+	@ViewBuilder
+	private var contentView: some View {
+		ZStack {
+			packListView
+			if viewModel.showProgressIndicator {
+				progressIndicatorView
+			}
+		}
+	}
+
 	private var packListView: some View {
 		ScrollView(.vertical, showsIndicators: false) {
 			VStack(spacing: 0) {
@@ -55,6 +63,17 @@ struct PackListView<ViewModel: PackListViewModelProtocol>: View {
 		}
 		.background{
 			Color.background.ignoresSafeArea()
+		}
+	}
+
+	private var progressIndicatorView: some View {
+		ZStack {
+			Color.background
+				.opacity(0.7)
+				.ignoresSafeArea()
+			ProgressView()
+				.scaleEffect(2)
+				.tint(.accentColor)
 		}
 	}
 }
