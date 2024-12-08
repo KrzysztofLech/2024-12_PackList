@@ -95,10 +95,9 @@ final class PackListViewModel: PackListViewModelProtocol {
 	}
 
 	private func sortPacks(_ packs: [Pack]) -> [Pack] {
-		packs
-			.sorted { $0.priority < $1.priority }
-
-		//// Add other rules
 		// TODO: Add other rules
+		packs
+			.sorted { $0.id < $1.id }
+			.sorted { $0.priority < $1.priority }
 	}
 }
