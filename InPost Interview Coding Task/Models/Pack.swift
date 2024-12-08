@@ -72,7 +72,7 @@ extension Pack {
 		switch status {
 		case .outForDelivery:
 			Image(.kurier)
-		case .readyToPickup:
+		case .readyToPickup, .delivered:
 			Image(.paczkomat)
 		default:
 			nil
@@ -122,6 +122,15 @@ extension Pack {
 			pickupDate: Date.now.addingTimeInterval(-86400),
 			storedDate: nil,
 			shipmentType: .parcelLocker
+		),
+		.init(
+			id: "96730345345597442248334",
+			status: .unknown,
+			sender: "Nieznany",
+			expiryDate: nil,
+			pickupDate: nil,
+			storedDate: nil,
+			shipmentType: .courier
 		)
 	]
 }

@@ -51,4 +51,9 @@ enum AppStrings {
 		static let sender = "NADAWCA"
 		static let more = "więcej"
 	}
+
+	enum Group {
+		static let readyToPickup = "Gotowe do odbioru"
+		static let other = "Pozostałe"
+	}
 }

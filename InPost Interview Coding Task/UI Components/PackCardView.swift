@@ -56,14 +56,14 @@ struct PackCardView: View {
 
 			// Right part if needed
 			if let date = pack.dateForDescription {
-				Spacer(minLength: 16)
+				Spacer(minLength: 32)
 
 				VStack(alignment: .trailing, spacing: 4) {
 					Text(pack.status.description)
 						.packCardTitleStyle()
 					dateView(date)
-						.frame(width: 162, alignment: .trailing)
 				}
+				.layoutPriority(1)
 			}
 		}
 	}

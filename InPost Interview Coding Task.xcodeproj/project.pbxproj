@@ -25,6 +25,7 @@
 		6B1F65A32D0459DB0042852D /* PackCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1F65A22D0459DB0042852D /* PackCardView.swift */; };
 		6B1F65A62D0489DF0042852D /* TextViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1F65A52D0489DF0042852D /* TextViewModifiers.swift */; };
 		6B72678D2D04A76D00BF473D /* Date+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B72678C2D04A76600BF473D /* Date+extensions.swift */; };
+		6B72678F2D04DC1000BF473D /* GroupHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B72678E2D04DC1000BF473D /* GroupHeaderView.swift */; };
 		D671D9582913E528001FA9D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D9572913E528001FA9D5 /* AppDelegate.swift */; };
 		D671D9612913E529001FA9D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D671D9602913E529001FA9D5 /* Assets.xcassets */; };
 		D671D96F2913E529001FA9D5 /* InPostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D96E2913E529001FA9D5 /* InPostTests.swift */; };
@@ -72,6 +73,7 @@
 		6B1F65A22D0459DB0042852D /* PackCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackCardView.swift; sourceTree = "<group>"; };
 		6B1F65A52D0489DF0042852D /* TextViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewModifiers.swift; sourceTree = "<group>"; };
 		6B72678C2D04A76600BF473D /* Date+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+extensions.swift"; sourceTree = "<group>"; };
+		6B72678E2D04DC1000BF473D /* GroupHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupHeaderView.swift; sourceTree = "<group>"; };
 		83D85C87E2E58F658C011C49 /* Pods-InPost Interview Coding Task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InPost Interview Coding Task.release.xcconfig"; path = "Target Support Files/Pods-InPost Interview Coding Task/Pods-InPost Interview Coding Task.release.xcconfig"; sourceTree = "<group>"; };
 		86F3EED5272EDA4036556337 /* Pods-InPost Interview Coding Task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InPost Interview Coding Task.debug.xcconfig"; path = "Target Support Files/Pods-InPost Interview Coding Task/Pods-InPost Interview Coding Task.debug.xcconfig"; sourceTree = "<group>"; };
 		871FC296EE090F4634A2C236 /* Pods_InPost_Interview_Coding_Task_InPost_Interview_Coding_TaskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InPost_Interview_Coding_Task_InPost_Interview_Coding_TaskUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				6B1F65A22D0459DB0042852D /* PackCardView.swift */,
+				6B72678E2D04DC1000BF473D /* GroupHeaderView.swift */,
 			);
 			path = "UI Components";
 			sourceTree = "<group>";
@@ -543,6 +546,7 @@
 				6B1F657E2D0365CA0042852D /* Status.swift in Sources */,
 				6B1F658A2D042FC60042852D /* PackListViewModel.swift in Sources */,
 				6B72678D2D04A76D00BF473D /* Date+extensions.swift in Sources */,
+				6B72678F2D04DC1000BF473D /* GroupHeaderView.swift in Sources */,
 				6B1F65A62D0489DF0042852D /* TextViewModifiers.swift in Sources */,
 				6B1F65842D036C590042852D /* AppStrings.swift in Sources */,
 				D671D9582913E528001FA9D5 /* AppDelegate.swift in Sources */,
