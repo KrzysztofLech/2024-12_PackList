@@ -10,14 +10,14 @@ final class PackListViewModel: ObservableObject {
 	func getData() {
 		let packs = Pack.previewData
 
-		// TODO: add sorting
+		let packsSorted = sortPacks(packs)
 
 		var groups: [GroupType : [Pack]] = [:]
 		groups[.readyToPickup] = []
 		groups[.other] = []
 
 		/// Here you can change the rules for assigning packs to the correct group
-		packs.forEach { pack in
+		packsSorted.forEach { pack in
 			switch pack.status {
 			case .outForDelivery, .readyToPickup:
 				groups[.readyToPickup]?.append(pack)
@@ -33,5 +33,12 @@ final class PackListViewModel: ObservableObject {
 
 	func refreshData() {
 		print("❤️")
+	}
+
+	private func sortPacks(_ packs: [Pack]) -> [Pack] {
+		packs
+			.sorted { $0.priority < $1.priority }
+
+		// TODO: Add other rules
 	}
 }
