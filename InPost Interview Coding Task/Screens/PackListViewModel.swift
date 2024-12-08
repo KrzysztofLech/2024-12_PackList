@@ -10,6 +10,7 @@ protocol PackListViewModelProtocol: ObservableObject {
 
 	func getData() async
 	func refreshData()
+	func setPackAsArchived(_ pack: Pack)
 }
 
 final class PackListViewModel: PackListViewModelProtocol {
@@ -47,19 +48,40 @@ final class PackListViewModel: PackListViewModelProtocol {
 		}
 	}
 
+	func setPackAsArchived(_ pack: Pack) {
+		let packId = pack.id
+
+		do {
+			try dataManager.setPackAsArchived(packId: packId)
+
+			if let groupIndex = packGroups.firstIndex(where: { $0.1.contains(where: { $0.id == packId }) }) {
+				packGroups[groupIndex].1.removeAll { $0.id == packId }
+			}
+		} catch {
+			DispatchQueue.main.async { [weak self] in
+				self?.showAlert = true
+			}
+		}
+	}
+
 	private func prepareData(packs: [Pack]) {
-		let packsSorted = sortPacks(packs)
+		let filteredPacks = packs.filter { $0.archived != true }
+		let packsSorted = sortPacks(filteredPacks)
 
 		var groups: [GroupType : [Pack]] = [:]
-		groups[.readyToPickup] = []
-		groups[.other] = []
 
 		// Here you can change the rules for assigning packs to the correct group
 		packsSorted.forEach { pack in
 			switch pack.status {
 			case .outForDelivery, .readyToPickup:
+				if groups[.readyToPickup] == nil {
+					groups[.readyToPickup] = []
+				}
 				groups[.readyToPickup]?.append(pack)
 			default:
+				if groups[.other] == nil {
+					groups[.other] = []
+				}
 				groups[.other]?.append(pack)
 			}
 		}

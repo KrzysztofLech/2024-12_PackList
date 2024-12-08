@@ -5,17 +5,36 @@ import Foundation
 
 protocol DataManagerProtocol {
 	func getData() async throws -> [Pack]
+	func setPackAsArchived(packId: String) throws
 }
 
 final class DataManager: DataManagerProtocol {
 
+	private let localDataBaseService: LocalDataBaseServiceProtocol
 	private let networkService: NetworkServiceProtocol
 
-	init(networkService: NetworkServiceProtocol) {
+	init(localDataBaseService: LocalDataBaseServiceProtocol, networkService: NetworkServiceProtocol) {
+		self.localDataBaseService = localDataBaseService
 		self.networkService = networkService
 	}
 
 	func getData() async throws -> [Pack] {
-		try await networkService.getPacks()
+		let realmPacks = try localDataBaseService.getPacks()
+		var packs = try await networkService.getPacks()
+
+		realmPacks.forEach { realmPack in
+			if realmPack.archived == true,
+			   let index = packs.firstIndex(where: { $0.id == realmPack.id }) {
+				packs[index].archived = true
+			}
+		}
+
+		try localDataBaseService.savePacks(packs)
+
+		return packs
+	}
+
+	func setPackAsArchived(packId: String) throws {
+		try localDataBaseService.setPackAsArchived(packId: packId)
 	}
 }

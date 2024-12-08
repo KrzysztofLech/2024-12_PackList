@@ -5,6 +5,7 @@ import SwiftUI
 
 struct PackCardView: View {
 	let pack: Pack
+	let archiveAction: (() -> Void)?
 
     var body: some View {
 		contentView
@@ -12,6 +13,12 @@ struct PackCardView: View {
 				Color.packCardBackground
 					.shadow(color: .shadow, radius: 10, x: 0, y: 10)
 			}
+			.gesture(
+				LongPressGesture(minimumDuration: 0.5)
+					.onEnded { _ in
+						archiveAction?()
+					}
+			)
     }
 
 	private var contentView: some View {
@@ -110,9 +117,9 @@ struct PackCardView: View {
 
 struct PackCardView_Previews: PreviewProvider {
 	static var previews: some View {
-		PackCardView(pack: Pack.previewData[0])
+		PackCardView(pack: Pack.previewData[0], archiveAction: nil)
 			.previewLayout(.fixed(width: 360, height: 176))
-		PackCardView(pack: Pack.previewData[1])
+		PackCardView(pack: Pack.previewData[1], archiveAction: nil)
 			.previewLayout(.fixed(width: 360, height: 208))
 	}
 }

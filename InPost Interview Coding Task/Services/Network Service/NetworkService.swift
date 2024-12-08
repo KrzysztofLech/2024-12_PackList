@@ -4,7 +4,7 @@
 import Foundation
 
 protocol NetworkServiceProtocol {
-	func getPacks() async throws -> [Pack]
+	func getPacks() async throws -> [Pack]	// 'async' will be needed for API requests
 }
 
 final class NetworkService: NetworkServiceProtocol {

@@ -32,6 +32,8 @@ struct Pack: Decodable, Identifiable {
     let pickupDate: Date?
     let storedDate: Date?
     let shipmentType: ShipmentType
+
+	var archived: Bool?
 }
 
 extension Pack {

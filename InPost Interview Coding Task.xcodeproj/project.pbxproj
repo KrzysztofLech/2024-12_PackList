@@ -27,6 +27,8 @@
 		6B72678F2D04DC1000BF473D /* GroupHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B72678E2D04DC1000BF473D /* GroupHeaderView.swift */; };
 		6B7267912D05DA0100BF473D /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7267902D05DA0100BF473D /* DataManager.swift */; };
 		6B7267932D05DE6500BF473D /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7267922D05DE6500BF473D /* NetworkingError.swift */; };
+		6BB3079B2D060912002A1E4E /* LocalDataBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB3079A2D060912002A1E4E /* LocalDataBaseService.swift */; };
+		6BB307A02D060AF0002A1E4E /* PackRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB3079F2D060ADF002A1E4E /* PackRealm.swift */; };
 		6BF518322D0601FF00D28A3E /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6BF518312D0601FF00D28A3E /* RealmSwift */; };
 		D671D9582913E528001FA9D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D9572913E528001FA9D5 /* AppDelegate.swift */; };
 		D671D9612913E529001FA9D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D671D9602913E529001FA9D5 /* Assets.xcassets */; };
@@ -74,6 +76,8 @@
 		6B72678E2D04DC1000BF473D /* GroupHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupHeaderView.swift; sourceTree = "<group>"; };
 		6B7267902D05DA0100BF473D /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		6B7267922D05DE6500BF473D /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
+		6BB3079A2D060912002A1E4E /* LocalDataBaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataBaseService.swift; sourceTree = "<group>"; };
+		6BB3079F2D060ADF002A1E4E /* PackRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackRealm.swift; sourceTree = "<group>"; };
 		D671D9542913E528001FA9D5 /* InPost Interview Coding Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InPost Interview Coding Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D671D9572913E528001FA9D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D671D9602913E529001FA9D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -128,6 +132,7 @@
 			children = (
 				D671D9952915110C001FA9D5 /* Network Service */,
 				6B7267902D05DA0100BF473D /* DataManager.swift */,
+				6BB3079D2D060AA3002A1E4E /* Local DataBase Service */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -178,6 +183,23 @@
 				6B1F65A52D0489DF0042852D /* TextViewModifiers.swift */,
 			);
 			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		6BB3079D2D060AA3002A1E4E /* Local DataBase Service */ = {
+			isa = PBXGroup;
+			children = (
+				6BB3079E2D060AC1002A1E4E /* Realm data models */,
+				6BB3079A2D060912002A1E4E /* LocalDataBaseService.swift */,
+			);
+			path = "Local DataBase Service";
+			sourceTree = "<group>";
+		};
+		6BB3079E2D060AC1002A1E4E /* Realm data models */ = {
+			isa = PBXGroup;
+			children = (
+				6BB3079F2D060ADF002A1E4E /* PackRealm.swift */,
+			);
+			path = "Realm data models";
 			sourceTree = "<group>";
 		};
 		D671D94B2913E528001FA9D5 = {
@@ -503,10 +525,12 @@
 				6B1F658A2D042FC60042852D /* PackListViewModel.swift in Sources */,
 				6B72678D2D04A76D00BF473D /* Date+extensions.swift in Sources */,
 				6B72678F2D04DC1000BF473D /* GroupHeaderView.swift in Sources */,
+				6BB307A02D060AF0002A1E4E /* PackRealm.swift in Sources */,
 				6B1F65A62D0489DF0042852D /* TextViewModifiers.swift in Sources */,
 				6B1F65842D036C590042852D /* AppStrings.swift in Sources */,
 				D671D9582913E528001FA9D5 /* AppDelegate.swift in Sources */,
 				6B1F65802D0367E50042852D /* ShipmentType.swift in Sources */,
+				6BB3079B2D060912002A1E4E /* LocalDataBaseService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

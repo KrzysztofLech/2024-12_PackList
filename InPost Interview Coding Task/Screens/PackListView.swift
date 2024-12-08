@@ -54,7 +54,9 @@ struct PackListView<ViewModel: PackListViewModelProtocol>: View {
 						GroupHeaderView(style: groupStyle)
 						VStack(spacing: 15) {
 							ForEach(packs) { pack in
-								PackCardView(pack: pack)
+								PackCardView(pack: pack) {
+									viewModel.setPackAsArchived(pack)
+								}
 							}
 						}
 					}
@@ -82,8 +84,9 @@ struct PackListView<ViewModel: PackListViewModelProtocol>: View {
 	PackListView(
 		viewModel: PackListViewModel(
 			dataManager: DataManager(
-				//networkService: MockNetworkService()
-				networkService: NetworkService()
+				localDataBaseService: LocalDataBaseService(),
+				networkService: MockNetworkService()
+//				networkService: NetworkService()
 			)
 		)
 	)

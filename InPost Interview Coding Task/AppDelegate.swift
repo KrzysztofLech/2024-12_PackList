@@ -20,8 +20,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func buildStartingView() {
+		let localDataBaseService: LocalDataBaseServiceProtocol = LocalDataBaseService()
 		let networkService: NetworkServiceProtocol = NetworkService()
-		let dataManager: DataManagerProtocol = DataManager(networkService: networkService)
+		let dataManager: DataManagerProtocol = DataManager(
+			localDataBaseService: localDataBaseService,
+			networkService: networkService
+		)
 
 		let packListViewModel = PackListViewModel(dataManager: dataManager)
 		let packListView = PackListView(viewModel: packListViewModel)
