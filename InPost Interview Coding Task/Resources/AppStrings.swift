@@ -56,4 +56,10 @@ enum AppStrings {
 		static let readyToPickup = "Gotowe do odbioru"
 		static let other = "Pozostałe"
 	}
+
+	enum Error {
+		static let title = "Error!"
+		static let message = "Some problems have occurred 😔"
+		static let buttonTitle = "OK"
+	}
 }

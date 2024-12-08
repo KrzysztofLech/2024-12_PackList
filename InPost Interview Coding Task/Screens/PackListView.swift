@@ -32,9 +32,9 @@ struct PackListView<ViewModel: PackListViewModelProtocol>: View {
 		}
 
 		.alert(isPresented: $viewModel.showAlert) {
-			Alert(title: Text("Error!"),
-				  message: Text("Some problems have occurred 😔"),
-				  dismissButton: .default(Text("OK")))
+			Alert(title: Text(AppStrings.Error.title),
+				  message: Text(AppStrings.Error.message),
+				  dismissButton: .default(Text(AppStrings.Error.buttonTitle)))
 		}
 	}
 
