@@ -20,7 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func buildStartingView() {
-		let packListViewModel = PackListViewModel()
+		let networkService: NetworkServiceProtocol = NetworkService()
+		let dataManager: DataManagerProtocol = DataManager(networkService: networkService)
+
+		let packListViewModel = PackListViewModel(dataManager: dataManager)
 		let packListView = PackListView(viewModel: packListViewModel)
 
         window = UIWindow(frame: UIScreen.main.bounds)

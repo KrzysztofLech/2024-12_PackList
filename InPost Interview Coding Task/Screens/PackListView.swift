@@ -3,9 +3,9 @@
 
 import SwiftUI
 
-struct PackListView: View {
+struct PackListView<ViewModel: PackListViewModelProtocol>: View {
 
-	@ObservedObject var viewModel: PackListViewModel
+	@ObservedObject var viewModel: ViewModel
 
 	var body: some View {
 		NavigationView {
@@ -24,7 +24,7 @@ struct PackListView: View {
 		}
 
 		.task {
-			viewModel.getData()
+			await viewModel.getData()
 		}
 
 		.refreshable {
@@ -54,5 +54,12 @@ struct PackListView: View {
 }
 
 #Preview {
-	PackListView(viewModel: PackListViewModel())
+	PackListView(
+		viewModel: PackListViewModel(
+			dataManager: DataManager(
+				//networkService: MockNetworkService()
+				networkService: NetworkService()
+			)
+		)
+	)
 }

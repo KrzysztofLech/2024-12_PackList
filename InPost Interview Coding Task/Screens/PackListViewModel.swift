@@ -3,13 +3,37 @@
 
 import Foundation
 
-final class PackListViewModel: ObservableObject {
+protocol PackListViewModelProtocol: ObservableObject {
+	var packGroups: [(GroupType, [Pack])] { get }
+	func getData() async
+	func refreshData()
+}
+
+final class PackListViewModel: PackListViewModelProtocol {
+
+	private let dataManager: DataManagerProtocol
 
 	@Published var packGroups: [(GroupType, [Pack])] = []
 
-	func getData() {
-		let packs = Pack.previewData
+	init(dataManager: DataManagerProtocol) {
+		self.dataManager = dataManager
+	}
 
+	func getData() async -> Void {
+		do {
+			let packs = try await dataManager.getData()
+			prepareData(packs: packs)
+		} catch {
+			print(error.localizedDescription)
+			/// handle errors
+		}
+	}
+
+	func refreshData() {
+		print("❤️")
+	}
+
+	private func prepareData(packs: [Pack]) {
 		let packsSorted = sortPacks(packs)
 
 		var groups: [GroupType : [Pack]] = [:]
@@ -26,19 +50,18 @@ final class PackListViewModel: ObservableObject {
 			}
 		}
 
-		packGroups = Array(groups.sorted {
-			$0.key.rawValue < $1.key.rawValue
-		})
-	}
-
-	func refreshData() {
-		print("❤️")
+		DispatchQueue.main.async { [weak self] in
+			self?.packGroups = Array(groups.sorted {
+				$0.key.rawValue < $1.key.rawValue
+			})
+		}
 	}
 
 	private func sortPacks(_ packs: [Pack]) -> [Pack] {
 		packs
 			.sorted { $0.priority < $1.priority }
 
+		//// Add other rules
 		// TODO: Add other rules
 	}
 }
