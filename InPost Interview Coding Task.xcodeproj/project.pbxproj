@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0ABB2A19C1443362ECFE34A7 /* Pods_InPost_Interview_Coding_TaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D6C720825E15C8DB9CDFC0 /* Pods_InPost_Interview_Coding_TaskTests.framework */; };
 		6B1F657E2D0365CA0042852D /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1F657D2D0365CA0042852D /* Status.swift */; };
 		6B1F65802D0367E50042852D /* ShipmentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1F657F2D0367E50042852D /* ShipmentType.swift */; };
 		6B1F65842D036C590042852D /* AppStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1F65832D036C590042852D /* AppStrings.swift */; };
@@ -28,14 +27,13 @@
 		6B72678F2D04DC1000BF473D /* GroupHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B72678E2D04DC1000BF473D /* GroupHeaderView.swift */; };
 		6B7267912D05DA0100BF473D /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7267902D05DA0100BF473D /* DataManager.swift */; };
 		6B7267932D05DE6500BF473D /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7267922D05DE6500BF473D /* NetworkingError.swift */; };
+		6BF518322D0601FF00D28A3E /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6BF518312D0601FF00D28A3E /* RealmSwift */; };
 		D671D9582913E528001FA9D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D9572913E528001FA9D5 /* AppDelegate.swift */; };
 		D671D9612913E529001FA9D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D671D9602913E529001FA9D5 /* Assets.xcassets */; };
 		D671D96F2913E529001FA9D5 /* InPostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D96E2913E529001FA9D5 /* InPostTests.swift */; };
 		D671D98F2913F2A1001FA9D5 /* Pack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D98E2913F2A1001FA9D5 /* Pack.swift */; };
 		D671D9972915111C001FA9D5 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D9962915111C001FA9D5 /* NetworkService.swift */; };
 		D671D99E2915139F001FA9D5 /* packs.json in Resources */ = {isa = PBXBuildFile; fileRef = D671D99D2915139F001FA9D5 /* packs.json */; };
-		E9D6834053AC34681B44D9F7 /* Pods_InPost_Interview_Coding_Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D61EABD2778CE163139EDFE /* Pods_InPost_Interview_Coding_Task.framework */; };
-		F06EF28DEDF5FA9A19B77F9F /* Pods_InPost_Interview_Coding_Task_InPost_Interview_Coding_TaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 871FC296EE090F4634A2C236 /* Pods_InPost_Interview_Coding_Task_InPost_Interview_Coding_TaskUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,8 +54,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		58AE36A9CE2AB8D6A8D303B3 /* Pods-InPost Interview Coding Task-InPost Interview Coding TaskUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InPost Interview Coding Task-InPost Interview Coding TaskUITests.debug.xcconfig"; path = "Target Support Files/Pods-InPost Interview Coding Task-InPost Interview Coding TaskUITests/Pods-InPost Interview Coding Task-InPost Interview Coding TaskUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		5E926BF62306256BFA253197 /* Pods-InPost Interview Coding TaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InPost Interview Coding TaskTests.release.xcconfig"; path = "Target Support Files/Pods-InPost Interview Coding TaskTests/Pods-InPost Interview Coding TaskTests.release.xcconfig"; sourceTree = "<group>"; };
 		6B1F657D2D0365CA0042852D /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		6B1F657F2D0367E50042852D /* ShipmentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipmentType.swift; sourceTree = "<group>"; };
 		6B1F65832D036C590042852D /* AppStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStrings.swift; sourceTree = "<group>"; };
@@ -78,11 +74,6 @@
 		6B72678E2D04DC1000BF473D /* GroupHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupHeaderView.swift; sourceTree = "<group>"; };
 		6B7267902D05DA0100BF473D /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		6B7267922D05DE6500BF473D /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
-		83D85C87E2E58F658C011C49 /* Pods-InPost Interview Coding Task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InPost Interview Coding Task.release.xcconfig"; path = "Target Support Files/Pods-InPost Interview Coding Task/Pods-InPost Interview Coding Task.release.xcconfig"; sourceTree = "<group>"; };
-		86F3EED5272EDA4036556337 /* Pods-InPost Interview Coding Task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InPost Interview Coding Task.debug.xcconfig"; path = "Target Support Files/Pods-InPost Interview Coding Task/Pods-InPost Interview Coding Task.debug.xcconfig"; sourceTree = "<group>"; };
-		871FC296EE090F4634A2C236 /* Pods_InPost_Interview_Coding_Task_InPost_Interview_Coding_TaskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InPost_Interview_Coding_Task_InPost_Interview_Coding_TaskUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		96F920E0E0807B41F317A8DF /* Pods-InPost Interview Coding TaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InPost Interview Coding TaskTests.debug.xcconfig"; path = "Target Support Files/Pods-InPost Interview Coding TaskTests/Pods-InPost Interview Coding TaskTests.debug.xcconfig"; sourceTree = "<group>"; };
-		9D61EABD2778CE163139EDFE /* Pods_InPost_Interview_Coding_Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InPost_Interview_Coding_Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D671D9542913E528001FA9D5 /* InPost Interview Coding Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InPost Interview Coding Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D671D9572913E528001FA9D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D671D9602913E529001FA9D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,8 +84,6 @@
 		D671D98E2913F2A1001FA9D5 /* Pack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pack.swift; sourceTree = "<group>"; };
 		D671D9962915111C001FA9D5 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		D671D99D2915139F001FA9D5 /* packs.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = packs.json; sourceTree = "<group>"; };
-		E9D6C720825E15C8DB9CDFC0 /* Pods_InPost_Interview_Coding_TaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InPost_Interview_Coding_TaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE0ADA89C9F6B8ABEECD7623 /* Pods-InPost Interview Coding Task-InPost Interview Coding TaskUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InPost Interview Coding Task-InPost Interview Coding TaskUITests.release.xcconfig"; path = "Target Support Files/Pods-InPost Interview Coding Task-InPost Interview Coding TaskUITests/Pods-InPost Interview Coding Task-InPost Interview Coding TaskUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9D6834053AC34681B44D9F7 /* Pods_InPost_Interview_Coding_Task.framework in Frameworks */,
+				6BF518322D0601FF00D28A3E /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +99,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0ABB2A19C1443362ECFE34A7 /* Pods_InPost_Interview_Coding_TaskTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,7 +106,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F06EF28DEDF5FA9A19B77F9F /* Pods_InPost_Interview_Coding_Task_InPost_Interview_Coding_TaskUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,37 +180,12 @@
 			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
-		913D9F73B32F33C130C9E20B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				9D61EABD2778CE163139EDFE /* Pods_InPost_Interview_Coding_Task.framework */,
-				871FC296EE090F4634A2C236 /* Pods_InPost_Interview_Coding_Task_InPost_Interview_Coding_TaskUITests.framework */,
-				E9D6C720825E15C8DB9CDFC0 /* Pods_InPost_Interview_Coding_TaskTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		A71A50FC3ACE229B9D6CDC43 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				86F3EED5272EDA4036556337 /* Pods-InPost Interview Coding Task.debug.xcconfig */,
-				83D85C87E2E58F658C011C49 /* Pods-InPost Interview Coding Task.release.xcconfig */,
-				58AE36A9CE2AB8D6A8D303B3 /* Pods-InPost Interview Coding Task-InPost Interview Coding TaskUITests.debug.xcconfig */,
-				FE0ADA89C9F6B8ABEECD7623 /* Pods-InPost Interview Coding Task-InPost Interview Coding TaskUITests.release.xcconfig */,
-				96F920E0E0807B41F317A8DF /* Pods-InPost Interview Coding TaskTests.debug.xcconfig */,
-				5E926BF62306256BFA253197 /* Pods-InPost Interview Coding TaskTests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		D671D94B2913E528001FA9D5 = {
 			isa = PBXGroup;
 			children = (
 				D671D9562913E528001FA9D5 /* InPost Interview Coding Task */,
 				D671D96D2913E529001FA9D5 /* InPost Interview Coding TaskTests */,
 				D671D9552913E528001FA9D5 /* Products */,
-				A71A50FC3ACE229B9D6CDC43 /* Pods */,
-				913D9F73B32F33C130C9E20B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -309,7 +271,6 @@
 				D671D9502913E528001FA9D5 /* Sources */,
 				D671D9512913E528001FA9D5 /* Frameworks */,
 				D671D9522913E528001FA9D5 /* Resources */,
-				38E58F8B2CE720D262223E4E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -391,6 +352,9 @@
 				Base,
 			);
 			mainGroup = D671D94B2913E528001FA9D5;
+			packageReferences = (
+				6BF518302D0601FF00D28A3E /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = D671D9552913E528001FA9D5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -451,23 +415,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InPost Interview Coding Task-InPost Interview Coding TaskUITests/Pods-InPost Interview Coding Task-InPost Interview Coding TaskUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		38E58F8B2CE720D262223E4E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-InPost Interview Coding Task/Pods-InPost Interview Coding Task-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-InPost Interview Coding Task/Pods-InPost Interview Coding Task-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InPost Interview Coding Task/Pods-InPost Interview Coding Task-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AA344891F738F1810698C3DF /* [CP] Check Pods Manifest.lock */ = {
@@ -533,7 +480,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "
+";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -720,13 +668,12 @@
 		};
 		D671D97F2913E529001FA9D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 86F3EED5272EDA4036556337 /* Pods-InPost Interview Coding Task.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 2UGBQYC9Y9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "InPost Interview Coding Task/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "InPost Recruitment Task";
@@ -753,13 +700,12 @@
 		};
 		D671D9802913E529001FA9D5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 83D85C87E2E58F658C011C49 /* Pods-InPost Interview Coding Task.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 2UGBQYC9Y9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "InPost Interview Coding Task/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "InPost Recruitment Task";
@@ -786,7 +732,6 @@
 		};
 		D671D9822913E529001FA9D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 96F920E0E0807B41F317A8DF /* Pods-InPost Interview Coding TaskTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -806,7 +751,6 @@
 		};
 		D671D9832913E529001FA9D5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5E926BF62306256BFA253197 /* Pods-InPost Interview Coding TaskTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -826,7 +770,6 @@
 		};
 		D671D9852913E529001FA9D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 58AE36A9CE2AB8D6A8D303B3 /* Pods-InPost Interview Coding Task-InPost Interview Coding TaskUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -844,7 +787,6 @@
 		};
 		D671D9862913E529001FA9D5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FE0ADA89C9F6B8ABEECD7623 /* Pods-InPost Interview Coding Task-InPost Interview Coding TaskUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -900,6 +842,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6BF518302D0601FF00D28A3E /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6BF518312D0601FF00D28A3E /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6BF518302D0601FF00D28A3E /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D671D94C2913E528001FA9D5 /* Project object */;
 }
