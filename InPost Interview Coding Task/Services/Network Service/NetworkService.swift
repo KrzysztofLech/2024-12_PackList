@@ -9,7 +9,7 @@ protocol NetworkServiceProtocol {
 
 final class NetworkService: NetworkServiceProtocol {
 
-	private let url = Bundle.main.url(forResource: "packs", withExtension: "json")!
+	private let url = Bundle.main.url(forResource: "packs", withExtension: "json")
 
     private let jsonDecoder: JSONDecoder = {
         let decoder = JSONDecoder()
@@ -18,6 +18,10 @@ final class NetworkService: NetworkServiceProtocol {
     }()
 
 	func getPacks() async throws -> [Pack] {
+		guard let url = url else {
+			throw NetworkingError.invalidURL
+		}
+
 		guard let data = try? Data(contentsOf: url) else {
 			throw NetworkingError.dataNotFound
 		}

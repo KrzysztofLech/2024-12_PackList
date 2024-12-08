@@ -30,6 +30,12 @@ struct PackListView<ViewModel: PackListViewModelProtocol>: View {
 		.refreshable {
 			viewModel.refreshData()
 		}
+
+		.alert(isPresented: $viewModel.showAlert) {
+			Alert(title: Text("Error!"),
+				  message: Text("Some problems have occurred 😔"),
+				  dismissButton: .default(Text("OK")))
+		}
 	}
 
 	private var packListView: some View {

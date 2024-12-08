@@ -5,6 +5,7 @@ import Foundation
 
 enum NetworkingError: LocalizedError {
 	case dataNotFound
+	case invalidURL
 	case invalidRequest
 	case invalidResponse
 	case parseJSON(DecodingError)
@@ -15,6 +16,9 @@ enum NetworkingError: LocalizedError {
 		switch self {
 		case .dataNotFound:
 			return "Data not found!"
+
+		case .invalidURL:
+			return "Invalid URL"
 
 		case .invalidRequest:
 			return "Invalid Request"

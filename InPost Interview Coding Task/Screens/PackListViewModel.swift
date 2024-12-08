@@ -5,6 +5,7 @@ import Foundation
 
 protocol PackListViewModelProtocol: ObservableObject {
 	var packGroups: [(GroupType, [Pack])] { get }
+	var showAlert: Bool { get set }
 	func getData() async
 	func refreshData()
 }
@@ -14,6 +15,7 @@ final class PackListViewModel: PackListViewModelProtocol {
 	private let dataManager: DataManagerProtocol
 
 	@Published var packGroups: [(GroupType, [Pack])] = []
+	@Published var showAlert: Bool = false
 
 	init(dataManager: DataManagerProtocol) {
 		self.dataManager = dataManager
@@ -24,8 +26,9 @@ final class PackListViewModel: PackListViewModelProtocol {
 			let packs = try await dataManager.getData()
 			prepareData(packs: packs)
 		} catch {
-			print(error.localizedDescription)
-			/// handle errors
+			DispatchQueue.main.async { [weak self] in
+				self?.showAlert = true
+			}
 		}
 	}
 
