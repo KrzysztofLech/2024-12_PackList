@@ -85,3 +85,9 @@ final class LocalDataBaseService: LocalDataBaseServiceProtocol {
 		return realmModel
 	}
 }
+
+final class MockLocalDataBaseService: LocalDataBaseServiceProtocol {
+	func getPacks() throws -> [Pack] { Pack.previewData }
+	func savePacks(_ packs: [Pack]) throws {}
+	func setPackAsArchived(packId: String) throws {}
+}

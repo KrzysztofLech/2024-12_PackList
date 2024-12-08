@@ -97,7 +97,7 @@ struct PackListView<ViewModel: PackListViewModelProtocol>: View {
 	PackListView(
 		viewModel: PackListViewModel(
 			dataManager: DataManager(
-				localDataBaseService: LocalDataBaseService(),
+				localDataBaseService: MockLocalDataBaseService(),
 				networkService: MockNetworkService()
 //				networkService: NetworkService()
 			)
