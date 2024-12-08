@@ -40,6 +40,7 @@ struct PackListView<ViewModel: PackListViewModelProtocol>: View {
 	private var contentView: some View {
 		ZStack {
 			packListView
+
 			if viewModel.showProgressIndicator {
 				progressIndicatorView
 			}
@@ -48,14 +49,18 @@ struct PackListView<ViewModel: PackListViewModelProtocol>: View {
 
 	private var packListView: some View {
 		ScrollView(.vertical, showsIndicators: false) {
-			VStack(spacing: 0) {
-				ForEach(viewModel.packGroups, id: \.0) { groupStyle, packs in
-					VStack(spacing: 0) {
-						GroupHeaderView(style: groupStyle)
-						VStack(spacing: 15) {
-							ForEach(packs) { pack in
-								PackCardView(pack: pack) {
-									viewModel.setPackAsArchived(pack)
+			if viewModel.packGroups.isEmpty {
+				naPackView
+			} else {
+				VStack(spacing: 0) {
+					ForEach(viewModel.packGroups, id: \.0) { groupStyle, packs in
+						VStack(spacing: 0) {
+							GroupHeaderView(style: groupStyle)
+							VStack(spacing: 15) {
+								ForEach(packs) { pack in
+									PackCardView(pack: pack) {
+										viewModel.setPackAsArchived(pack)
+									}
 								}
 							}
 						}
@@ -77,6 +82,14 @@ struct PackListView<ViewModel: PackListViewModelProtocol>: View {
 				.scaleEffect(2)
 				.tint(.accentColor)
 		}
+	}
+
+	private var naPackView: some View {
+		Text(AppStrings.ListView.noPacks)
+			.font(.Montserrat.semiBold(size: 24))
+			.foregroundStyle(Color.accentColor)
+			.frame(maxWidth: .infinity)
+			.padding(.top, 64)
 	}
 }
 

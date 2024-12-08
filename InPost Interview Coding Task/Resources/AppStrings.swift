@@ -38,6 +38,7 @@ enum AppStrings {
 
 	enum ListView {
 		static let title = "InPost recruitment task"
+		static let noPacks = "Nie masz\nprzesyłek"
 
 		enum Group {
 			static let readyToPickup = "Gotowe do odbioru"

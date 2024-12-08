@@ -56,12 +56,19 @@ final class PackListViewModel: PackListViewModelProtocol {
 
 			if let groupIndex = packGroups.firstIndex(where: { $0.1.contains(where: { $0.id == packId }) }) {
 				packGroups[groupIndex].1.removeAll { $0.id == packId }
+				removeEmptyPackGroups()
 			}
 		} catch {
 			DispatchQueue.main.async { [weak self] in
 				self?.showAlert = true
 			}
 		}
+	}
+
+	private func removeEmptyPackGroups() {
+		packGroups.removeAll(where: { group, packs in
+			packs.isEmpty
+		})
 	}
 
 	private func prepareData(packs: [Pack]) {
