@@ -1,0 +1,121 @@
+{\rtf1\ansi\ansicpg1250\cocoartf2820
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;\f2\fswiss\fcharset0 Helvetica-Oblique;
+\f3\fswiss\fcharset0 Helvetica-BoldOblique;\f4\fnil\fcharset0 AppleColorEmoji;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww17480\viewh19800\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs32 \cf0 \
+Realizuj\uc0\u261 c zadanie zdecydowa\u322 em si\u281  na u\u380 ycie 
+\f1\b SwiftUI
+\f0\b0 . Aby korzysta\uc0\u263  z nowszej wersji tego framework'u, zmieni\u322 em minimaln\u261  wersj\u281  iOS wspieran\u261  przez aplikacj\u281  na 
+\f1\b iOS 15
+\f0\b0 . To bardzo dobra baza do pracy w tej technologii. Jeszcze lepsza by\uc0\u322 aby wersja, kt\'f3r\u261  oferuje iOS 16, a to dlatego, \u380 e dostarcza komponent `
+\f2\i NavigationStack
+\f0\i0 `, kt\'f3ry bardzo rozszerza mo\uc0\u380 liwo\u347 ci SwiftUI w kwestii nawigacji.\
+\
+Na temat korzy\uc0\u347 ci p\u322 yn\u261 cych z stosowania SwiftUI nie b\u281 d\u281  pisa\u263 , bo jest ich sporo, ale ch\u281 tnie o nich opowiem.\
+\
+Je\uc0\u347 li chodzi o architektur\u281 , to jestem zwolennikiem MVVM i tak\u261  zastosowa\u322 em w zadaniu.\
+\
+Lubi\uc0\u281  korzysta\u263  z najnowszych technologii, nie tylko dlatego, \u380 e s\u261  wygodniejsze w u\u380 yciu, ale g\u322 \'f3wnie dlatego, \u380 e najcz\u281 \u347 ciej wnosz\u261  wiele korzy\u347 ci: usprawniaj\u261  development, poprawiaj\u261  utrzymanie aplikacji ...\
+St\uc0\u261 d w\u322 a\u347 nie u\u380 ycie SwiftUI oraz 
+\f1\b SPM
+\f0\b0  (Swift Packet Manager), kt\'f3rego u\uc0\u380 y\u322 em do dodania biblioteki Realm.\
+Niestety, pozbycie si\uc0\u281  
+\f2\i Cocoapods
+\f0\i0  nie posz\uc0\u322 o mi idealnie, o czym dowiedzia\u322 em si\u281  realizuj\u261 c ostatni punkt (testy).\
+\
+Tam, gdzie mo\uc0\u380 na by\u322 o, to '
+\f2\i closure
+\f0\i0 ' zast\uc0\u281 powa\u322 em u\u380 yciem 
+\f2\i async/await
+\f0\i0 .\
+\
+Wiedz\uc0\u261 c, \u380 e w\u322 a\u347 ciwa aplikacja pobiera dane z API (w te\u347 cie mamy plik JSON), w 
+\f2\i NetworkService
+\f0\i0  zastosowa\uc0\u322 em rozwi\u261 zania, kt\'f3re u\u322 atwi\u261  to. Mam na my\u347 li w\u322 a\u347 nie 
+\f2\i async/await
+\f0\i0  oraz przekazywanie b\uc0\u322 \u281 d\'f3w, kt\'f3re s\u261  obs\u322 ugiwane i w razie ich pojawienia si\u281 , user widzie powiadomienie w formie prostego alertu systemowego.\
+\
+--------------------------------------------------------\
+\
+Stara\uc0\u322 em si\u281  zrealizowa\u263  wszystkie punkty:\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b \cf0 1. Grupowanie paczek.
+\f0\b0 \
+- zgodnie z przygotowan\uc0\u261  makiet\u261 , utworzy\u322 em dwie grupy\
+- dodanie kolejnych sprowadza si\uc0\u281  do prostego rozszerzenia `
+\f2\i GroupType
+\f0\i0 ` i zmianie logiki w metodzie 
+\f2\i PackListViewModel/prepareData
+\f0\i0 \
+\
+
+\f1\b 2. UI
+\f0\b0 \
+Jako by\uc0\u322 y Graphic Designer, bardzo du\u380 \u261  uwag\u281  przyk\u322 adam do kwestii zwi\u261 zanych z UI i UX. Dlatego stara\u322 em si\u281  mo\u380 liwie najprecyzyjniej zaimplementowa\u263  widoki z Figmy.\
+\
+
+\f1\b 3. Sortowanie
+\f0\b0 \
+Logik\uc0\u281  zwi\u261 zan\u261  z sortowanie zrobi\u322 em w minimalnym stopniu: po priorytecie i id.\
+Zdaj\uc0\u281  sobie spraw\u281 , \u380 e w w\u322 a\u347 ciwej aplikacji powinna by\u263  bardziej rozbudowana.\
+\
+
+\f1\b 4. Pull to refresh
+\f0\b0 \
+Dzi\uc0\u281 ki SwiftUI w wersji dla iOS 15, zrobienie tego by\u322 o du\u380 o \u322 atwiejsze ni\u380  dla wersji wcze\u347 niejszych.\
+\
+
+\f1\b 5. Lokalna baza danych
+\f0\b0 \
+Zrealizowa\uc0\u322 em to z wykorzystaniem Realm. Osobi\u347 cie jestem za stosowaniem natywnych rozwi\u261 za\u324  Apple: Core Data i SwiftData,\
+Oczywi\uc0\u347 cie, ka\u380 de rozwi\u261 zanie ma swoje plusy i minusy.\
+\
+
+\f1\b 6. Archiving
+\f0\b0 \
+Oznaczanie przesy\uc0\u322 ki jako archiwalna zosta\u322 o zrobione z u\u380 yciem 
+\f3\i\b LongPressGesture
+\f0\i0\b0 . \
+\
+
+\f1\b 7. Unsuported status
+\f0\b0 \
+W dostarczonym pliku JSON s\uc0\u261  dwa elementy, kt\'f3rych status nie jest wymieniony na li\u347 cie wspieranych status\'f3w i ich priorytet\'f3w:  NOT_READY i BROKEN_STATUS\
+\pard\tx890\pardeftab890\pardirnatural\partightenfactor0
+\cf0 Wszystkie statusy, kt\'f3rych nie ma na wspomnianej li\uc0\u347 cie otrzymuj\u261  status 
+\f2\i unknown
+\f0\i0 .\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\b \cf0 8. Dark Mode
+\f0\b0 \
+Aplikacja wspiera Dark Mode. \
+\
+
+\f1\b 9. Unit Tests
+\f0\b0 \
+Stara\uc0\u322 em si\u281  wykona\u263  wszystkie punkty i z tego powodu najmniej czasu zosta\u322 o mi na ostatni: testy jednostkowe.\
+Zak\uc0\u322 ada\u322 em, \u380 e wszystko p\'f3jdzie g\u322 adko i si\u281 \'a0przeliczy\u322 em.\
+Okaza\uc0\u322 o si\u281 , \u380 e pojawi\u322  si\u281  problem techniczny - nie by\u322 em w stanie zmusi\u263  Xcode do wykonywania test\'f3w. Nie mog\u322 em usun\u261 \u263 \'a0targetu z testami (lecia\u322  crash Xcode), a dodanie nowego nie pomaga\u322 o.\
+Ostatecznie utworzy\uc0\u322 em nowy projekt i do niego zacz\u261 \u322 em dodawa\u263  testy. Jest on na branchu `
+\f1\b New_project
+\f0\b0 `.\
+Tam te\uc0\u380  znajduj\u261  si\u281  testy. Nie ma ich wiele, bo bardzo du\u380 o czasu zaj\u281 \u322 o mi doj\u347 cie do tego rozwi\u261 zania, a nie chcia\u322 em prosi\u263 \'a0o kolejny czas na doko\u324 czenie zadania.\
+\
+\uc0\u379 ycz\u281  mi\u322 ego analizowania 
+\f4 \uc0\u55357 \u56898 
+\f0 .\
+\pard\pardeftab720\partightenfactor0
+\cf0 \expnd0\expndtw0\kerning0
+B\uc0\u281 d\u281  zobowi\u261 zany za uwagi i komentarze.\kerning1\expnd0\expndtw0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+}

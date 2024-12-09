@@ -131,8 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				D671D9952915110C001FA9D5 /* Network Service */,
-				6B7267902D05DA0100BF473D /* DataManager.swift */,
 				6BB3079D2D060AA3002A1E4E /* Local DataBase Service */,
+				6B7267902D05DA0100BF473D /* DataManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
