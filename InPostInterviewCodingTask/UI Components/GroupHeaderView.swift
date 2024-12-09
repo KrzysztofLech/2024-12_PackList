@@ -33,7 +33,7 @@ struct GroupHeaderView: View {
 
 	private var horizontalLineView: some View {
 		Rectangle()
-			.fill(Color.groupSeparator)
+			.fill(.groupSeparator)
 			.frame(height: 1)
 	}
 
@@ -41,7 +41,7 @@ struct GroupHeaderView: View {
 		Text(style.title)
 			.lineLimit(1)
 			.font(.Montserrat.semiBold(size: 13))
-			.foregroundStyle(Color.groupTitle)
+			.foregroundStyle(.groupTitle)
 			.layoutPriority(1)
 	}
 }

@@ -7,7 +7,7 @@ struct PackCardTitleModifier: ViewModifier {
 	func body(content: Content) -> some View {
 		content
 			.font(.Montserrat.semiBold(size: 11))
-			.foregroundStyle(Color.textLight)
+			.foregroundStyle(.textLight)
 	}
 }
 
@@ -17,7 +17,7 @@ struct PackCardTextMediumModifier: ViewModifier {
 	func body(content: Content) -> some View {
 		content
 			.font(.Montserrat.medium(size: size))
-			.foregroundStyle(Color.textDark)
+			.foregroundStyle(.textDark)
 	}
 }
 
@@ -27,7 +27,7 @@ struct PackCardTextBoldModifier: ViewModifier {
 	func body(content: Content) -> some View {
 		content
 			.font(.Montserrat.bold(size: size))
-			.foregroundStyle(Color.textDark)
+			.foregroundStyle(.textDark)
 	}
 }
 

@@ -101,15 +101,15 @@ struct PackCardView: View {
 		let convertedDate = date.convertedToPackCardStyle
 		return HStack(alignment: .center, spacing: 0) {
 			Text(convertedDate.day)
-				.foregroundStyle(Color.textDark)
+				.foregroundStyle(.textDark)
 			Text(" | ")
-				.foregroundStyle(Color.textLight)
+				.foregroundStyle(.textLight)
 			Text(convertedDate.date)
-				.foregroundStyle(Color.textDark)
+				.foregroundStyle(.textDark)
 			Text(" | ")
-				.foregroundStyle(Color.textLight)
+				.foregroundStyle(.textLight)
 			Text(convertedDate.time)
-				.foregroundStyle(Color.textDark)
+				.foregroundStyle(.textDark)
 		}
 		.font(.Montserrat.medium(size: 15))
 	}

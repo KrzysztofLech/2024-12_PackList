@@ -1,14 +1,10 @@
-//
-//  InPost_Interview_Coding_TaskTests.swift
-//  InPost Interview Coding TaskTests
-//
-//  Created by Damian Piwowarski on 03/11/2022.
-//
+//  InPostInterviewCodingTaskTests.swift
+//  Created by Krzysztof Lech on 09/12/2024.
 
 import XCTest
-@testable import InPost_Interview_Coding_Task
+@testable import InPostInterviewCodingTask
 
-final class InPostTests: XCTestCase {
+final class InPostInterviewCodingTaskTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
