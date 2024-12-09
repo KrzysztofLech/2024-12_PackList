@@ -37,6 +37,6 @@ final class NetworkService: NetworkServiceProtocol {
 	}
 }
 
-final class MockNetworkService: NetworkServiceProtocol {
+final class PreviewNetworkService: NetworkServiceProtocol {
 	func getPacks() async throws -> [Pack] { Pack.previewData }
 }

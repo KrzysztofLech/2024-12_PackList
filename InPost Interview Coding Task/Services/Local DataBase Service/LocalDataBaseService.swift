@@ -86,7 +86,7 @@ final class LocalDataBaseService: LocalDataBaseServiceProtocol {
 	}
 }
 
-final class MockLocalDataBaseService: LocalDataBaseServiceProtocol {
+final class PreviewLocalDataBaseService: LocalDataBaseServiceProtocol {
 	func getPacks() throws -> [Pack] { Pack.previewData }
 	func savePacks(_ packs: [Pack]) throws {}
 	func setPackAsArchived(packId: String) throws {}
