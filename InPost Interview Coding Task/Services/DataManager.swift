@@ -19,12 +19,12 @@ final class DataManager: DataManagerProtocol {
 	}
 
 	func getData() async throws -> [Pack] {
-		let realmPacks = try localDataBaseService.getPacks()
+		let storedPacks = localDataBaseService.getPacks()
 		var packs = try await networkService.getPacks()
 
-		realmPacks.forEach { realmPack in
-			if realmPack.archived == true,
-			   let index = packs.firstIndex(where: { $0.id == realmPack.id }) {
+		storedPacks.forEach { storedPack in
+			if storedPack.archived == true,
+			   let index = packs.firstIndex(where: { $0.id == storedPack.id }) {
 				packs[index].archived = true
 			}
 		}
