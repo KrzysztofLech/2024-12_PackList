@@ -1,61 +1,50 @@
 //  LocalDataBaseService.swift
 //  Created by Krzysztof Lech on 08/12/2024.
 
+import Foundation
 import RealmSwift
 
 protocol LocalDataBaseServiceProtocol {
-	func getPacks() throws -> [Pack]
+	func getPacks() -> [Pack]
 	func savePacks(_ packs: [Pack]) throws
 	func setPackAsArchived(packId: String) throws
 }
 
 final class LocalDataBaseService: LocalDataBaseServiceProtocol {
 
-	func getPacks() throws -> [Pack] {
+	private var realm: Realm {
 		do {
-			let realm = try Realm()
-			let realmPacks = realm.objects(PackRealmModel.self)
-			return realmPacks.map(mapPackRealModelToPack)
+			return try Realm()
 		} catch {
-			throw error
+			fatalError("Failed to initialize Realm: \(error.localizedDescription)")
 		}
 	}
 
-	func savePacks(_ packs: [Pack]) throws {
-		try deleteAllPacks()
+	func getPacks() -> [Pack] {
+		let realmPacks = realm.objects(PackRealmModel.self)
+		return realmPacks.map(mapPackRealModelToPack)
+	}
 
-		do {
-			let realm = try Realm()
-			let realmPacks = packs.map(mapPackToRealmModel)
-			try realm.write {
-				realm.add(realmPacks)
-			}
-		} catch {
-			throw error
+	func savePacks(_ packs: [Pack]) throws {
+		try deleteAllData()
+
+		let realmPacks = packs.map(mapPackToRealmModel)
+		try realm.write {
+			realm.add(realmPacks)
 		}
 	}
 
 	func setPackAsArchived(packId: String) throws {
-		do {
-			let realm = try Realm()
-			if let pack = realm.object(ofType: PackRealmModel.self, forPrimaryKey: packId) {
-				try realm.write {
-					pack.archived = true
-				}
-			}
-		} catch {
-			throw error
+		guard let pack = realm.object(ofType: PackRealmModel.self, forPrimaryKey: packId) else { return }
+
+		try realm.write {
+			pack.archived = true
 		}
 	}
 
-	private func deleteAllPacks() throws {
-		do {
-			let realm = try Realm()
-			try realm.write {
-				realm.deleteAll()
-			}
-		} catch {
-			throw error
+	private func deleteAllData() throws {
+		try realm.write {
+			realm.deleteAll()
 		}
 	}
 
@@ -87,7 +76,7 @@ final class LocalDataBaseService: LocalDataBaseServiceProtocol {
 }
 
 final class PreviewLocalDataBaseService: LocalDataBaseServiceProtocol {
-	func getPacks() throws -> [Pack] { Pack.previewData }
+	func getPacks() -> [Pack] { Pack.previewData }
 	func savePacks(_ packs: [Pack]) throws {}
 	func setPackAsArchived(packId: String) throws {}
 }
